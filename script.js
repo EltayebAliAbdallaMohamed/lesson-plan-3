@@ -44,6 +44,16 @@ const qrCodeContainer = document.getElementById("qrCode");
 const qrStatus = document.getElementById("qrStatus");
 let qrCodeCreated = false;
 
+// Lesson-level metadata is optional so existing lesson files remain compatible.
+function displayLessonDetails(details = {}) {
+  document.getElementById("lessonObjective").textContent = details.objective || "Lesson details";
+  document.getElementById("lessonActivity").textContent = details.activityType || "";
+  document.getElementById("lessonInteraction").textContent = details.interactionType || "";
+  document.getElementById("lessonEstimatedTime").textContent = details.estimatedTime || "";
+  document.getElementById("lessonAssessment").textContent = details.assessment || "";
+  document.getElementById("lessonSummaryFeedback").textContent = details.summaryFeedback || "";
+}
+
 toggleQrButton.addEventListener("click", function () {
   const shouldShow = qrPanel.hidden;
 
@@ -144,6 +154,7 @@ async function loadData(fileName) {
       const titleEl = document.getElementById("lessonTitle");
       if (titleEl) titleEl.textContent = data.title;
     }
+    displayLessonDetails(data.lessonDetails);
     Sentences = data.sentences;
     currentAudioIndex = 0;
     navPos = 0;

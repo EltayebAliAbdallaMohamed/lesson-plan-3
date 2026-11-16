@@ -1,7 +1,13 @@
-
-
 {
   "title": "Q3eSE_LS0_U04_QClassroom",
+  "lessonDetails": {
+    "objective": "Objective: ask & answer the unit question",
+    "activityType": "What do you enjoy doing?\nStudents take turns to answer",
+    "interactionType": "T-Ss\nSs-Ss",
+    "estimatedTime": "10-15 minutes",
+    "assessment": "Ss take turns to ask and answer the unit question",
+    "summaryFeedback": "Activities can be: interesting, boring, exciting, fun, dangerous,"
+  },
   "sentences": [
      {
       "speaker": "Teacher + 4 Students",
